@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".Add_daily_report"
+    >
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/prompt_medium"
+        android:gravity="center"
+        android:text="เพิ่มบันทึกอาการผู้ป่วย"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bottom_background_light_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!--<EditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/prompt_medium"
+            android:hint="ชื่อ"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/dateTimetoAdd"
+            tools:layout_editor_absoluteX="70dp" />
+
+        <EditText
+            android:id="@+id/txtlastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/prompt_medium"
+            android:hint="นามสกุล"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:layout_editor_absoluteX="70dp" />
+-->
+
+        <EditText
+            android:id="@+id/dateTimetoAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/prompt_medium"
+            android:hint="วันที่บันทีก"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/prompt"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="อาการเบื้องต้น"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTimetoAdd" />
+
+        <EditText
+            android:id="@+id/txtsymtom"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/prompt_medium"
+            android:hint="อาการเพิ่มเติม"
+            android:inputType="textEmailAddress|textMultiLine"
+            android:lines="20"
+            android:minHeight="48dp"
+            android:minLines="5"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/btn_custom"
+            android:fontFamily="@font/prompt_medium"
+            android:onClick="addDaily"
+            android:text="ยืนยัน"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsymtom" />
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="76dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="มีอาการเหนื่อย"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/checkBox5"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="12dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="ไม่รับรสชาติ"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/checkBox1"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+
+            android:text="ไม่ได้กลิ่น"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/checkBox3"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="ปวดศีรษะ"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/checkBox6"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/green"
+
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="เจ็บคอ"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="มีอาการไอ"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/prompt"
+            android:minHeight="48dp"
+            android:text="มีไข้"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
